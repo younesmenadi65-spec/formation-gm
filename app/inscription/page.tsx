@@ -9,6 +9,9 @@ export default async function P({ searchParams }: any) {
       <h1 className="text-2xl mb-4">Inscription</h1>
       {searchParams.err && <p className="text-red-400 mb-3">{E[searchParams.err]}</p>}
       
+      {/* Valeur de session par défaut pour valider l'action du serveur */}
+      <input type="hidden" name="session" value="1" />
+
       <input name="rp" required maxLength={60} placeholder="Nom RP" className="inp mb-3" />
       <input name="discord" required maxLength={40} placeholder="Pseudo Discord (jamais ton mot de passe !)" className="inp mb-3" />
       
