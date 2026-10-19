@@ -14,7 +14,7 @@ export default async function P({ searchParams }: any) {
       
       {searchParams.err && <p className="text-red-400 mb-3">{E[searchParams.err]}</p>}
       
-      {/* Session cachée par défaut */}
+      {/* Session transmise de façon cachée (sans champ déroulant visible) */}
       <input type="hidden" name="session" value="1" />
 
       <input name="rp" required maxLength={60} placeholder="Nom RP" className="inp mb-3" />
